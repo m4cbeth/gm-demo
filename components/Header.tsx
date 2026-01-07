@@ -16,7 +16,7 @@ export default function Header() {
     };
 
     return (
-        <header className="flex justify-between items-center p-0 sticky top-0 z-50 bg-black/90 backdrop-blur-sm">
+        <header className="flex justify-between items-center p-0 sticky top-0 z-50 bg-white/40 backdrop-blur-sm">
             <Image
                 src="/SWAG-iA-Logo-Vertical.jpg"
                 alt="Sensible Wealth Advisory Group"
