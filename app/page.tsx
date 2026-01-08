@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen font-sans bg-white">
-      <main className="w-full h-full">
+    <div className="w-full font-sans bg-white">
+      <main className="w-full">
         {/* Hero Section */}
-        <section className="relative w-full h-full flex items-end justify-center">
+        <section className="relative w-full h-screen flex items-end justify-center">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -38,7 +38,7 @@ export default function Home() {
               Your retirement is only as secure as the plan guiding it—including your advisor's. If your financial planner doesn't have a succession plan, <span className="text-blue-600 font-medium">your journey could be left adrift</span>. Don’t let someone else's lack of planning threaten your future.
             </p>
             <a
-              href="/risk-assessment"
+              href="/succession-assessment"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md text-lg"
             >
               Take the Assessment
@@ -51,7 +51,7 @@ export default function Home() {
               {`A Legacy of Continuity`}
             </h3>
             <p className="text-lg sm:text-xl text-gray-700 mb-4">
-               {`Greg's personal succession story—spanning three generations of seamless advisory transitions—would be detailed here. This narrative will illustrate how proper succession planning has protected client relationships across decades, and why Greg's own experience as both successor and succession planner makes him uniquely qualified to safeguard your financial future.`}
+              {`Greg's personal succession story—spanning three generations of seamless advisory transitions—would be detailed here. This narrative will illustrate how proper succession planning has protected client relationships across decades, and why Greg's own experience as both successor and succession planner makes him uniquely qualified to safeguard your financial future.`}
             </p>
           </div>
         </section>
