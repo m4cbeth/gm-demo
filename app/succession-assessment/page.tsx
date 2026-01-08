@@ -6,7 +6,7 @@ export default function SuccessionAssessment() {
         <div className="w-full min-h-screen font-sans bg-white">
             <main className="w-full">
                 {/* Hero Section */}
-                <section className="relative w-full min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800">
+                <section className="relative w-full min-h-[60vh] flex items-center justify-center bg-linear-to-br from-blue-600 to-blue-800">
                     <div className="absolute inset-0 bg-black/20"></div>
 
                     {/* Text Content */}
@@ -69,7 +69,7 @@ export default function SuccessionAssessment() {
 
                         <div className="space-y-6 mb-12">
                             <div className="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
-                                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                                <div className="shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
                                     1
                                 </div>
                                 <div>
@@ -83,7 +83,7 @@ export default function SuccessionAssessment() {
                             </div>
 
                             <div className="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
-                                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                                <div className="shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
                                     2
                                 </div>
                                 <div>
@@ -97,7 +97,7 @@ export default function SuccessionAssessment() {
                             </div>
 
                             <div className="bg-white rounded-xl p-6 shadow-md flex items-start gap-4">
-                                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                                <div className="shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
                                     3
                                 </div>
                                 <div>
