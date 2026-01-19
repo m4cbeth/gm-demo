@@ -10,13 +10,13 @@ export default function Home() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/gm_and_team.jpg"
-              alt="GM and Team"
+              alt="The Sensible Wealth Advisory Team"
               fill
               className="object-cover object-[20%] md:object-cover"
               priority
             />
             {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/30"></div>
+            {/* <div className="absolute inset-0 bg-black/30"></div> */}
           </div>
 
           {/* Text Content */}
@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className="bg-black/70 rounded-2xl py-3 text-4xl sm:text-5xl md:text-4xl lg:text-4xl font-bold text-blue-600 mb-4 drop-shadow-lg">
               Complete Wealth <br />&<br /> Financial Management
             </h1>
-            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-medium drop-shadow-md">
+            <h2 className="bg-black/70 rounded-2xl py-2  text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-medium drop-shadow-md">
               {`Your advisor's retirement shouldn't disrupt yours`}
             </h2>
           </div>
@@ -34,7 +34,7 @@ export default function Home() {
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
               What happens when your advisor retires before you do?
             </h3>
-            <p className="text-lg sm:text-xl text-gray-700 mb-6">
+            <p className="text-lg sm:text-xl text-gray-700 mb-6 ">
               Your retirement is only as secure as the plan guiding it—including your advisor's. If your financial planner doesn't have a succession plan, <span className="text-blue-600 font-medium">your journey could be left adrift</span>. Don’t let someone else's lack of planning threaten your future.
             </p>
             <a

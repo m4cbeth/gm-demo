@@ -75,19 +75,19 @@ export default function ResultsPage() {
         <div className="w-full min-h-screen font-sans bg-white">
             <main className="w-full">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-20 md:py-24">
+                <section className="bg-linear-to-br from-blue-600 to-blue-800 py-16 sm:py-20 md:py-24">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
                             Your Succession Risk Assessment
                         </h1>
-                        <div className={`inline-block px-6 py-3 rounded-full border-2 font-semibold text-lg ${getRiskColor(analysis.level)}`}>
+                        <div className={`inline-block px-7 py-4 rounded-full border-2 font-semibold text-3xl ${getRiskColor(analysis.level)}`}>
                             {analysis.level} Risk
                         </div>
                     </div>
                 </section>
 
                 {/* Score Display */}
-                <section className="bg-white py-12">
+                {/* <section className="bg-white py-12">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="bg-gray-50 rounded-2xl p-8 text-center">
                             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -112,7 +112,7 @@ export default function ResultsPage() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Summary */}
                 <section className="bg-blue-50 py-12">
@@ -209,10 +209,42 @@ export default function ResultsPage() {
                             </div>
                         </div>
                     </div>
+                    <div>
+                    <div className="max-w-md mx-auto mt-10 text-center">
+                        <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                            Get a Personalized<br />
+                            Succession Plan Information Package<br />
+                            Sent to Your Email
+                        </h3>
+                        <form
+                            className="flex flex-col items-center gap-3"
+                            onSubmit={e => {
+                                e.preventDefault();
+                                // Optional: Implement email submit logic here, e.g., call API or show thank you message
+                                alert('This functionality is not in the scope of this demo.');
+                            }}
+                        >
+                            <input
+                                type="email"
+                                required
+                                placeholder="Enter your email"
+                                className="text-black flex-1 px-4 py-3 rounded-lg border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                name="succession-info-email"
+                                autoComplete="email"
+                            />
+                            <button
+                                type="submit"
+                                className="bg-blue-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                            >
+                                Send Me the Package
+                            </button>
+                        </form>
+                    </div>
+                    </div>
                 </section>
 
                 {/* CTA Section */}
-                <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-16">
+                <section className="bg-linear-to-br from-blue-600 to-blue-800 py-16">
                     <div className="max-w-2xl mx-auto text-center px-4 sm:px-6 lg:px-8">
                         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                             Ready to Discuss Your Results?
@@ -227,12 +259,12 @@ export default function ResultsPage() {
                             >
                                 Schedule Consultation
                             </Link>
-                            <Link
+                            {/* <Link
                                 href="/succession-assessment#start"
                                 className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 px-10 rounded-lg transition-colors duration-200 shadow-lg text-lg"
                             >
                                 Retake Assessment
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </section>

@@ -27,16 +27,16 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-4 mr-10 text-xl">
-                <Link href="/" className="text-gray-200 hover:text-blue-300">Home</Link>
-                <Link href="/about" className="text-gray-200 hover:text-blue-300">About</Link>
-                <Link href="/services" className="text-gray-200 hover:text-blue-300">Services</Link>
-                <Link href="/contact" className="text-gray-200 hover:text-blue-300">Contact</Link>
+                <Link href="/" className="text-blue-900 hover:text-blue-600">Home</Link>
+                <Link href="/about" className="text-blue-900 hover:text-blue-600">About</Link>
+                <Link href="/services" className="text-blue-900 hover:text-blue-600">Services</Link>
+                <Link href="/contact" className="text-blue-900 hover:text-blue-600">Contact</Link>
             </nav>
 
             {/* Mobile Hamburger Button */}
             <button
                 onClick={toggleMenu}
-                className="md:hidden mr-4 p-2 text-gray-200 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded"
+                className="md:hidden mr-4 p-2 text-gray-900 hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded"
                 aria-label="Toggle menu"
                 aria-expanded={isMenuOpen}
             >
