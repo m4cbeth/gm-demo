@@ -2,29 +2,14 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
-interface FormData {
-    relationshipLength: string;
-    knowsSuccessor: string;
-    discussedPlan: string;
-    advisorAge: string;
-    practiceStructure: string;
-    metTeamMembers: string;
-    complexity: string;
-}
+import { useAtom } from 'jotai';
+import { assessmentAnswersAtom } from './store';
+import type { AssessmentAnswers } from './utils/scoring';
 
 export default function AssessmentForm() {
     const router = useRouter();
     const [currentStep, setCurrentStep] = useState(0);
-    const [formData, setFormData] = useState<FormData>({
-        relationshipLength: '',
-        knowsSuccessor: '',
-        discussedPlan: '',
-        advisorAge: '',
-        practiceStructure: '',
-        metTeamMembers: '',
-        complexity: '',
-    });
+    const [formData, setFormData] = useAtom(assessmentAnswersAtom);
     const [errors, setErrors] = useState<Record<string, string>>({});
 
     const questions = [
@@ -107,7 +92,7 @@ export default function AssessmentForm() {
 
     const validateStep = (): boolean => {
         const questionId = questions[currentStep].id;
-        if (!formData[questionId as keyof FormData]) {
+        if (!formData[questionId as keyof AssessmentAnswers]) {
             setErrors((prev) => ({
                 ...prev,
                 [questionId]: 'Please select an option to continue',
@@ -136,13 +121,8 @@ export default function AssessmentForm() {
     const handleSubmit = () => {
         if (!validateStep()) return;
 
-        // Build query string from form data
-        const params = new URLSearchParams();
-        Object.entries(formData).forEach(([key, value]) => {
-            params.append(key, value);
-        });
-
-        router.push(`/succession-assessment/results?${params.toString()}`);
+        // Navigate to results - answers are already stored in the atom
+        router.push('/succession-assessment/results');
     };
 
     const progress = ((currentStep + 1) / questions.length) * 100;
@@ -180,7 +160,7 @@ export default function AssessmentForm() {
                             {questions[currentStep].options.map((option, index) => (
                                 <label
                                     key={index}
-                                    className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all ${formData[questions[currentStep].id as keyof FormData] === option
+                                    className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all ${formData[questions[currentStep].id as keyof AssessmentAnswers] === option
                                         ? 'border-blue-600 bg-blue-50'
                                         : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
                                         }`}
@@ -189,7 +169,7 @@ export default function AssessmentForm() {
                                         type="radio"
                                         name={questions[currentStep].id}
                                         value={option}
-                                        checked={formData[questions[currentStep].id as keyof FormData] === option}
+                                        checked={formData[questions[currentStep].id as keyof AssessmentAnswers] === option}
                                         onChange={() => handleChange(option)}
                                         className="w-5 h-5 text-blue-600 focus:ring-blue-500 focus:ring-2"
                                     />

@@ -1,37 +1,21 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import Link from 'next/link';
-import { calculateRiskScore, type RiskAnalysis, type AssessmentAnswers } from '../utils/scoring';
+import { useAtomValue } from 'jotai';
+import { assessmentAnswersAtom, isAssessmentCompleteAtom } from '../store';
+import { calculateRiskScore, type RiskAnalysis } from '../utils/scoring';
 
 export default function ResultsPage() {
-    const searchParams = useSearchParams();
-    const [analysis, setAnalysis] = useState<RiskAnalysis | null>(null);
-    const [answers, setAnswers] = useState<AssessmentAnswers | null>(null);
+    const answers = useAtomValue(assessmentAnswersAtom);
+    const isComplete = useAtomValue(isAssessmentCompleteAtom);
 
-    useEffect(() => {
-        const answersData: AssessmentAnswers = {
-            relationshipLength: searchParams.get('relationshipLength') || '',
-            knowsSuccessor: searchParams.get('knowsSuccessor') || '',
-            discussedPlan: searchParams.get('discussedPlan') || '',
-            advisorAge: searchParams.get('advisorAge') || '',
-            practiceStructure: searchParams.get('practiceStructure') || '',
-            metTeamMembers: searchParams.get('metTeamMembers') || '',
-            complexity: searchParams.get('complexity') || '',
-        };
+    const analysis = useMemo<RiskAnalysis | null>(() => {
+        if (!isComplete) return null;
+        return calculateRiskScore(answers);
+    }, [answers, isComplete]);
 
-        // Validate that we have all answers
-        const hasAllAnswers = Object.values(answersData).every((value) => value !== '');
-
-        if (hasAllAnswers) {
-            setAnswers(answersData);
-            const result = calculateRiskScore(answersData);
-            setAnalysis(result);
-        }
-    }, [searchParams]);
-
-    if (!analysis || !answers) {
+    if (!analysis || !isComplete) {
         return (
             <div className="min-h-screen bg-white flex items-center justify-center">
                 <div className="text-center">
