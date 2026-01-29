@@ -159,7 +159,7 @@ export default function ResultsPage() {
                             What Good Succession Planning Looks Like
                         </h2>
                         <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border border-black">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Clear Communication
                                 </h3>
@@ -167,7 +167,7 @@ export default function ResultsPage() {
                                     Your advisor should proactively discuss their succession plan, introduce you to their successor, and provide a clear timeline for any transitions.
                                 </p>
                             </div>
-                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border border-black">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Team Familiarity
                                 </h3>
@@ -175,7 +175,7 @@ export default function ResultsPage() {
                                     Multiple team members should be familiar with your account and financial situation, ensuring continuity even if your primary advisor is unavailable.
                                 </p>
                             </div>
-                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border border-black">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Documented Processes
                                 </h3>
@@ -183,7 +183,7 @@ export default function ResultsPage() {
                                     A well-structured practice should have documented procedures for account transitions, client communication, and maintaining service quality during changes.
                                 </p>
                             </div>
-                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border border-black">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Ongoing Review
                                 </h3>
@@ -239,7 +239,7 @@ export default function ResultsPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contact"
-                                className="inline-block bg-white border-4 hover:bg-gray-100 text-blue-600 font-bold py-4 px-10 rounded-lg transition-colors duration-200 shadow-lg text-lg"
+                                className="inline-block bg-white border-5 border-blue-400  hover:bg-gray-100 text-blue-600 font-bold py-4 px-10 rounded-lg transition-colors duration-200 shadow-lg text-lg"
                             >
                                 Schedule Consultation
                             </Link>
