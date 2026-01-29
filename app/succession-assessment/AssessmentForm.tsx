@@ -18,8 +18,7 @@ export default function AssessmentForm() {
             question: 'How long have you worked with your current financial advisor?',
             options: [
                 'Less than 1 year',
-                '1-3 years',
-                '3-5 years',
+                '1-5 years',
                 '5-10 years',
                 '10+ years',
             ],

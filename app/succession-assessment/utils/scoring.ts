@@ -35,9 +35,8 @@ export function calculateRiskScore(answers: AssessmentAnswers): RiskAnalysis {
     // Question 1: Relationship Length
     const relationshipScores: Record<string, number> = {
         'Less than 1 year': 0,
-        '1-3 years': 5,
-        '3-5 years': 10,
-        '5-10 years': 15,
+        '1-5 years': 5,
+        '5-10 years': 10,
         '10+ years': 20,
     };
     totalScore += relationshipScores[answers.relationshipLength] || 0;
