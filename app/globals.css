@@ -46,19 +46,12 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --background: #0a0a0a; */
-  }
-}
+
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  /* font-family: Arial, Helvetica, sans-serif; */
-}
 
 :root {
   --radius: 0.625rem;
