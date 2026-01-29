@@ -176,7 +176,7 @@ export default function AssessmentForm() {
                                         onChange={() => handleChange(option)}
                                         className="w-5 h-5 text-blue-600 focus:ring-blue-500 focus:ring-2"
                                     />
-                                    <span className="ml-3 text-lg text-gray-700">{option}</span>
+                                    <span className="ml-3 text-md text-gray-700">{option}</span>
                                 </label>
                             ))}
                         </div>
