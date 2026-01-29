@@ -16,7 +16,7 @@ export default function Footer() {
                     </p>
                 </div>
                 <div className="text-center">
-                    <p className="text-lg">
+                    <p className="font-sans text-md font-thin" >
                         © {currentYear} Sensible Wealth Advisory Group
                     </p>
                 </div>
