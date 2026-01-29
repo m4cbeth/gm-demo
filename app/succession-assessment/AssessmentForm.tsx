@@ -130,10 +130,10 @@ export default function AssessmentForm() {
     return (
         <div id="start" className="bg-white py-16 sm:py-20 md:py-24 scroll-mt-20">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
-                    {/* Progress Bar */}
-                    <div className="mb-8">
-                        <div className="flex justify-between items-center mb-2">
+                <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-2 md:p-4">
+                    {/* Qustion and percentage progress */}
+                    <div className="mb-2">
+                        <div className="flex justify-between items-center">
                             <span className="text-sm font-medium text-gray-700">
                                 Question {currentStep + 1} of {questions.length}
                             </span>
@@ -141,19 +141,22 @@ export default function AssessmentForm() {
                                 {Math.round(progress)}%
                             </span>
                         </div>
-                        <div className="w-full bg-gray-200 rounded-full h-3">
-                            <div
-                                className="bg-blue-600 h-3 rounded-full transition-all duration-300"
-                                style={{ width: `${progress}%` }}
-                            />
-                        </div>
                     </div>
 
                     {/* Question */}
-                    <div className="mb-8">
-                        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
+                    <div className="mb-5">
+                        <h2 className="text-2xl font-semibold text-gray-900 mb-2">
                             {questions[currentStep].question}
                         </h2>
+                        {/* Progress Bar */}
+                        <div className="mb-2">
+                            <div className="w-full bg-gray-200 rounded-full h-3 ">
+                                <div
+                                    className="bg-blue-600 h-3 rounded-full transition-all duration-300"
+                                    style={{ width: `${progress}%` }}
+                                />
+                            </div>
+                        </div>
 
                         {/* Options */}
                         <div className="space-y-3">

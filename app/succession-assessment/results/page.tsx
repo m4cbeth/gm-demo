@@ -123,7 +123,7 @@ export default function ResultsPage() {
                                 {analysis.gaps.map((gap, index) => (
                                     <div
                                         key={index}
-                                        className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg"
+                                        className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg shadow-sm"
                                     >
                                         <p className="text-gray-700">{gap}</p>
                                     </div>
@@ -134,7 +134,7 @@ export default function ResultsPage() {
                 )}
 
                 {/* Recommendations */}
-                <section className="bg-gray-50 py-12">
+                <section className="bg-blue-50/90 py-12">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-3xl font-semibold text-gray-900 mb-6">
                             Recommended Actions
@@ -159,7 +159,7 @@ export default function ResultsPage() {
                             What Good Succession Planning Looks Like
                         </h2>
                         <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-blue-50 rounded-xl p-6">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Clear Communication
                                 </h3>
@@ -167,7 +167,7 @@ export default function ResultsPage() {
                                     Your advisor should proactively discuss their succession plan, introduce you to their successor, and provide a clear timeline for any transitions.
                                 </p>
                             </div>
-                            <div className="bg-blue-50 rounded-xl p-6">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Team Familiarity
                                 </h3>
@@ -175,7 +175,7 @@ export default function ResultsPage() {
                                     Multiple team members should be familiar with your account and financial situation, ensuring continuity even if your primary advisor is unavailable.
                                 </p>
                             </div>
-                            <div className="bg-blue-50 rounded-xl p-6">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Documented Processes
                                 </h3>
@@ -183,7 +183,7 @@ export default function ResultsPage() {
                                     A well-structured practice should have documented procedures for account transitions, client communication, and maintaining service quality during changes.
                                 </p>
                             </div>
-                            <div className="bg-blue-50 rounded-xl p-6">
+                            <div className="bg-blue-50 rounded-xl p-6 shadow-lg border">
                                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                     Ongoing Review
                                 </h3>
@@ -239,16 +239,10 @@ export default function ResultsPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contact"
-                                className="inline-block bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-10 rounded-lg transition-colors duration-200 shadow-lg text-lg"
+                                className="inline-block bg-white border-4 hover:bg-gray-100 text-blue-600 font-bold py-4 px-10 rounded-lg transition-colors duration-200 shadow-lg text-lg"
                             >
                                 Schedule Consultation
                             </Link>
-                            {/* <Link
-                                href="/succession-assessment#start"
-                                className="inline-block bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 px-10 rounded-lg transition-colors duration-200 shadow-lg text-lg"
-                            >
-                                Retake Assessment
-                            </Link> */}
                         </div>
                     </div>
                 </section>

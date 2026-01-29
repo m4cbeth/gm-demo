@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className="bg-black/70 rounded-2xl py-3 text-4xl sm:text-5xl md:text-4xl lg:text-4xl font-bold text-blue-600 mb-4 drop-shadow-lg">
               Complete Wealth <br />&<br /> Financial Management
             </h1>
-            <h2 className="bg-black/70 rounded-2xl py-2  text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-medium drop-shadow-md">
+            <h2 className="bg-black/70 rounded-2xl py-2 lg:p-4 text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-medium drop-shadow-md">
               {`Your advisor's retirement shouldn't disrupt yours`}
             </h2>
           </div>
