@@ -140,14 +140,22 @@ export default function ResultsPage() {
                             Recommended Actions
                         </h2>
                         <div className="space-y-4">
-                            {analysis.recommendations.map((recommendation, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm"
-                                >
-                                    <p className="text-gray-700">{recommendation}</p>
+                            {analysis.recommendations.length > 0 ? (
+                                analysis.recommendations.map((recommendation, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-white border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm"
+                                    >
+                                        <p className="text-gray-700">{recommendation}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="bg-white border-l-4 border-green-500 p-4 rounded-r-lg shadow-sm">
+                                    <p className="text-gray-700">
+                                        No immediate actions required. Continue to monitor and periodically review your succession arrangements with your advisor to ensure they remain aligned with your needs.
+                                    </p>
                                 </div>
-                            ))}
+                            )}
                         </div>
                     </div>
                 </section>
